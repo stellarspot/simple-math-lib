@@ -11,8 +11,19 @@ public class FunctionsTest {
     public void testSqr() {
 
         double delta = 0.001;
-        assertEquals(1, Functions.SQR.calculate(1), delta);
-        assertEquals(4, Functions.SQR.calculate(2), delta);
-        assertEquals(9, Functions.SQR.calculate(3), delta);
+        Function sqr = Functions.SQR;
+        assertEquals(1, sqr.calculate(1), delta);
+        assertEquals(4, sqr.calculate(2), delta);
+        assertEquals(9, sqr.calculate(3), delta);
+    }
+
+    @Test
+    public void testSqrt() {
+
+        double delta = 0.001;
+        Function sqrt = Functions.SQRT;
+        assertEquals(1, sqrt.calculate(1), delta);
+        assertEquals(2, sqrt.calculate(4), delta);
+        assertEquals(3, sqrt.calculate(9), delta);
     }
 }
